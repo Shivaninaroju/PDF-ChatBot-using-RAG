@@ -10,7 +10,7 @@ def load_pdf(file_path):
     documents = loader.load()  # Loads each page as a document
     return documents
 
-# 2. Split the text into smaller chunks (to avoid large token issues)
+# 2.Split the text into smaller chunks (to avoid large token issues)
 def split_documents(documents):
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=500,        # each chunk = 500 characters
