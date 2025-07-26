@@ -25,7 +25,7 @@ def create_vector_db(chunks):
     vector_store = FAISS.from_documents(chunks, embeddings)  # Store vectors in FAISS
     return vector_store
 
-# 4.Save FAISS DB locally (optional step for caching)
+#4.Save FAISS DB locally (optional step for caching)
 def save_vector_db(vector_store, path="faiss_index"):
     vector_store.save_local(path)
 
