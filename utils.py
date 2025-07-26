@@ -19,7 +19,7 @@ def split_documents(documents):
     chunks = splitter.split_documents(documents)
     return chunks
 
-# 3.Create embeddings and store in FAISS vector DB
+#3.Create embeddings and store in FAISS vector DB
 def create_vector_db(chunks):
     embeddings = OpenAIEmbeddings()  # Converts text to vectors using OpenAI
     vector_store = FAISS.from_documents(chunks, embeddings)  # Store vectors in FAISS
